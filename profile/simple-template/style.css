@@ -64,11 +64,16 @@ audio{
 
 .padding_side {
 	width: 1280px;
-	margin: 0 auto;
+/*	margin: 0 auto;*/
 }
 
 header, .about, .plus_prod, .scrinshots, .reviews, .buy, .contacts, .music_box {
 	padding: 50px;
+}
+.music_box {
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
 }
 
 header{
@@ -539,19 +544,16 @@ footer {
 		margin: 0 auto;
 		width: 180px;
 	}
+	.product{
+		display: flex;
+  	justify-content: center;
+	}
 }
 
 @media screen and (max-width: 1325px){
 	main .about{
 		text-align: center;
     justify-content: center;
-	}
-}
-
-@media screen and (max-width: 1239px){
-	.product{
-		display: flex;
-  	justify-content: center;
 	}
 }
 
