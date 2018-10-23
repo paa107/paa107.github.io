@@ -64,7 +64,7 @@ audio{
 
 .padding_side {
 	width: 1280px;
-/*	margin: 0 auto;*/
+	margin: 0 auto;
 }
 
 header, .about, .plus_prod, .scrinshots, .reviews, .buy, .contacts, .music_box {
