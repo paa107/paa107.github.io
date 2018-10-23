@@ -133,6 +133,21 @@ li {
 	padding-bottom: 5px;
 	list-style: none;
 }
+
+/* Левая стрелка Назад */
+.button_back{
+  cursor: pointer;
+  width: 25px;
+  height: 100px;
+  background-color: silver;
+  position: fixed;
+  z-index: 10;
+  top: 25%;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 100px
+}
+
 /* Адаптивный дизайн */
 
 /* 1280px */
