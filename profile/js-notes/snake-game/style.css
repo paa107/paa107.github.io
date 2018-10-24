@@ -167,6 +167,20 @@ td.game-table-cell{
     margin: 30px auto 0;
     text-align: center;
 }
+
+/* Левая стрелка Назад */
+.button_back{
+  cursor: pointer;
+  width: 25px;
+  height: 100px;
+  background-color: silver;
+  position: fixed;
+  z-index: 10;
+  top: 35%;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 100px
+}
 /* Адаптивный дизайн */
 
 /* 1280px */
