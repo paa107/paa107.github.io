@@ -20,8 +20,8 @@ function init() {
     points.innerHTML = score;
     var wrap = document.getElementsByClassName('wrap')[0];
     // Подгоняем размер контейнера под игровое поле
-    if (16 * (FIELD_SIZE_X + 1) < 380) {
-        wrap.style.width = '380px';
+    if (16 * (FIELD_SIZE_X + 1) < 350) {
+        wrap.style.width = '350px';
     }
     else {
         wrap.style.width = (16 * (FIELD_SIZE_X + 1)).toString() + 'px';
