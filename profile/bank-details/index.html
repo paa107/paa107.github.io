@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Test Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+  
+  <div id="container">
+    
+    <nav>
+      <ul>
+        <li class="nav__item nav__item_active-near"><a href="#">Личный кабинет</a></li>
+        <li class="nav__item nav__item_active"><a href="#">Платежи</a></li>
+        <li class="nav__item nav__item_active-near"><a href="#">История платежей</a></li>
+        <li class="nav__item"><a href="#">Настройки</a></li>
+        <li class="nav__item"><a href="#">Выйти</a></li>
+      </ul>
+    </nav>
+    
+    <main>
+    
+      <div id="auth">
+        
+        <!--Таблица-->
+        <span class="subtitle">Информация по оплате:</span>
+        
+        <div id="score">
+          <div class="score__item subtitle">Номер счета:</div>
+          <div class="score__item value">87123658716587</div>
+          <div class="score__item subtitle">Сумма платежа:</div>
+          <div class="score__item value">100 руб.</div>
+        </div>
+        
+        <!--Заголовок-->
+        <h2>Данные банковской карты</h2>
+        
+        <!--Два блока div со стилизацией и компоновкой-->
+        <div id="card-block">
+          <form action="">
+            <span class="subtitle">Номер карты</span>
+            
+            <div class="card-number">
+              <input type="digit" class="input-item card-number__item" maxlength="4" pattern="[0-9]{4}">
+              <input type="digit" class="input-item card-number__item" maxlength="4" pattern="[0-9]{4}">
+              <input type="digit" class="input-item card-number__item" maxlength="4" pattern="[0-9]{4}">
+              <input type="digit" class="input-item card-number__item" maxlength="4" pattern="[0-9]{4}">
+            </div>
+            
+            <div id="wrap-date-cvv">
+             
+              <div id="date-block">
+                <span class="subtitle">Срок действия</span>
+                <div id="date">
+                  <select class="dropdown" name="month" multiple>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select class="dropdown" name="year" multiple>
+                    <option value="2019">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div id="cvv-block">
+                <span class="subtitle">Код CVV2 / CVC2</span>
+                
+                <div id="cvv-faq">
+                  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#bec6cf"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm.053 17c.466 0 .844-.378.844-.845 0-.466-.378-.844-.844-.844-.466 0-.845.378-.845.844 0 .467.379.845.845.845zm.468-2.822h-.998c-.035-1.162.182-2.054.939-2.943.491-.57 1.607-1.479 1.945-2.058.722-1.229.077-3.177-2.271-3.177-1.439 0-2.615.877-2.928 2.507l-1.018-.102c.28-2.236 1.958-3.405 3.922-3.405 1.964 0 3.615 1.25 3.615 3.22 0 1.806-1.826 2.782-2.638 3.868-.422.563-.555 1.377-.568 2.09z"/></svg>
+                  <input class="input-item" type="digit" id="cvv-field" pattern="[0-9]{3}" maxlength="3">
+                </div>
+                
+              </div>
+              
+            </div>
+            
+            <div class="card-user">
+              <input type="user" pattern="^[a-zA-Z]+\s[a-zA-Z]+$" class="input-item card-user__field" placeholder="Держатель карты">
+            </div>
+            
+            <!-- Кнопка оплаты -->
+            <input type="submit" value="Оплатить" class="send-btn">
+          </form>
+          
+          <!-- Фронтальная часть карты -->
+          <div class="card card-front"></div>
+          <!-- Тыльная часть карты -->
+          <div class="card card-back">
+            <div class="card-back__decor-line"></div>
+          </div>
+          
+        </div>
+        
+      </div>
+    
+      <footer>
+        Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+      </footer>
+      
+    </main>
+    
+  </div>
+ 
+  <script src="dist/main.js"></script>
+</body>
+</html>
