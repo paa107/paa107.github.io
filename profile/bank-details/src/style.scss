@@ -1,0 +1,490 @@
+@import './fonts/opensans.scss';
+
+$back-ground: #191c24;
+
+$err-color: coral;
+
+// Стиль текста в панели навигации
+$nav-font: #fff;
+$nav-size: 18px;
+$nav-item-height: 75px;
+$nav-item-width: 318px;
+$nav-padding-left: 29px;
+
+$nav__item_active: #2a2d37;
+$nav__item_near: #1f2229;
+
+// переменные шрифтов
+$subtitle-color: #8494ab;
+$value-color: #373c43;
+$placeholder-color: #bec6cf;
+$footer-color:  #89909d;
+
+// Формат блока авторризации
+$auth-bg-color: #f7f8f8;
+
+//цвет границы input
+$br-color-item: #e4e9ee;
+
+//размеры кнопки отправки
+$send-btn-width: 133px;
+$send-btn-height: 40px;
+//шрифт кнопки отправки
+$send-btn-color:  #fff;
+$send-btn-size: 14px;
+$send-btn-weight: 700;
+$send-btn-align: center;
+//цвет кнопки
+$bg-btn: #005abf;
+$bg-btn-rgba: rgba(0, 90, 191, 1);
+$bg-btn-rgba-active: rgba(0, 90, 191, 0.18);
+
+// Формат инфо блока
+$main-width: 639px;
+
+// Footer формат
+$footer-background: #191c24;
+$footer-font-size: 12px;
+$footer-line-height: 18px;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  
+  //параметры стандартны для всего текста поля авторизации
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
+html, body {
+  width: 100%;
+  background-color: black;
+}
+
+// Оформление шрифтов
+.subtitle {
+  color:  $subtitle-color;
+}
+.value {
+  color:  $value-color;
+}
+
+#container {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+// панель навигации
+nav ul {
+  list-style-type: none;
+  
+}
+.nav__item {
+  background-color: $back-ground;
+  padding-left: $nav-padding-left;
+  
+  a {
+    display: block;
+    min-width: $nav-item-width;
+    height: $nav-item-height;
+    /* Формат текста */
+    font-family: 'Open Sans', sans-serif;
+    color: $nav-font;
+    font-size: $nav-size;
+    font-weight: 700;
+    line-height: $nav-item-height;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+}
+.nav__item_active {
+  background-color: #2a2d37;
+  a {
+    color: #808592;
+  }
+}
+.nav__item_active-near{
+  background-color: $nav__item_near;
+}
+.nav__item:last-child a {
+  color: #808592;
+}
+
+main {
+  width: $main-width;
+  
+  #auth {
+    background-color:  $auth-bg-color;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 47px 29px 46px 45px;
+  }
+  
+  #score {
+    display: grid;
+    margin-top: 23px;
+    grid-template-columns: 160px 160px;
+  }
+  
+  h2 {
+    margin-top: 35px;
+    margin-bottom: 22px;
+    font-family: 'Open Sans', sans-serif;
+    color:  #383d43;
+    font-size: 21.98px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  #card-block{
+    position: relative;
+    width: 100%;
+    
+    form {
+        position: relative;
+        z-index: 5;
+        padding: 22px 0 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+      
+        .input-item{
+          border: 1px solid $br-color-item;
+          box-sizing: border-box;
+          background-color:  #ffffff;
+        }
+        .input-item:invalid {
+          border-color: $err-color;
+          outline: 0;
+        }
+        
+        .card-number {
+          display: flex;
+          margin-top: 2px 0 12px 0;
+          
+          .card-number__item {
+            width: 65px;
+            height: 42px;
+            margin-right: 9px;
+            padding-left: 12px;
+            
+          }
+        }
+        
+        .novalid {
+          border-color: $err-color;
+        }
+        .valid {
+          border-color: $br-color-item;
+        }
+        
+        #wrap-date-cvv {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          
+          #date {
+          margin-top: 2px;
+          margin-right: 9px;
+          
+          select {
+            width: 70px;
+            height: 42px;
+            text-align: center;
+            color: $value-color;
+            padding-left: 15px;
+          }
+          select:nth-child(2) {
+            width: 86px;
+          }
+        }
+          #cvv-block {
+            .subtitle {
+              margin-right: 24px;
+              margin-bottom: 4px;
+            }
+            #cvv-field {
+              display: block;
+              width: 138px;
+              height: 42px;
+              margin-top: 2px;
+              padding-left: 12px;
+              color: $value-color;
+            }
+          }
+          #cvv-faq {
+            position: relative;
+            svg {
+              position: absolute;
+              top: 8px;
+              right: 24px;
+            }
+            svg:hover {
+              fill: black;
+              cursor: pointer;
+              transition: 200ms;
+              -webkit-transition: 200ms;
+            }
+          }
+        }
+        
+        .card-user {
+          margin-top: 12px;
+          
+          .card-user__field {
+//            border: 1px solid #e4e9ee;
+            box-sizing: border-box;
+            background-color:  #ffffff;
+            width: 319px;
+            height: 42px;
+            color: $value-color;
+            padding: 0 12px 0 12px;
+          }
+          .card-user__field::-webkit-input-placeholder {color:$placeholder-color; opacity:1;}
+          .card-user__field::-moz-placeholder          {color:$placeholder-color; opacity:1;}
+          .card-user__field:-moz-placeholder           {color:$placeholder-color; opacity:1;}
+          .card-user__field:-ms-input-placeholder      {color:$placeholder-color; opacity:1;}
+          
+          .card-user__field:focus::-webkit-input-placeholder {opacity:0;}
+          .card-user__field:focus::-moz-placeholder          {opacity:0;}
+          .card-user__field:focus:-moz-placeholder           {opacity:0;}
+          .card-user__field:focus:-ms-input-placeholder      {opacity:0;}
+        }
+      }
+    
+    .card {
+      border-radius: 10px;
+      border: 1px solid #e4e9ee;
+      box-sizing: border-box;
+      background-color:  #f7f8f8;
+      width: 350px;
+      height: 236px;
+    }
+    .card-front {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+    }
+    .card-back {
+      position: absolute;
+      z-index: 0;
+      top: 14px;
+      right: 0;
+      text-align: right;
+
+      .card-back__decor-line {
+        background-color:  #e4e9ee;
+        width: 100%;
+        height: 42px;
+        margin: 26px 0 19px 0;
+      }
+    }
+  }
+
+  /* Кнопка отправки данных */
+  .send-btn {
+    margin: 54px 0 0 15px;
+    background-color: $bg-btn;
+    background: -webkit-linear-gradient(90deg, $bg-btn-rgba 0%, $bg-btn-rgba-active 100%);
+    background: -moz-linear-gradient(90deg, $bg-btn-rgba 0%, $bg-btn-rgba-active 100%);
+    background: o-linear-gradient(90deg, $bg-btn-rgba 0%, $bg-btn-rgba-active 100%);
+    background: ms-linear-gradient(90deg, $bg-btn-rgba 0%, $bg-btn-rgba-active 100%);
+    background: linear-gradient(0deg, $bg-btn-rgba 0%, $bg-btn-rgba-active 100%);
+    width: $send-btn-width;
+    height: $send-btn-height;
+    border: 0px;
+    border-radius: 20px;
+    /*Формат текста*/
+    font-family: OpenSans;
+    color:  #ffffff;
+    font-size: $send-btn-size;
+    font-weight: $send-btn-weight;
+    line-height: $send-btn-height;
+    text-align: $send-btn-align;
+  }
+  .send-btn:hover {
+    cursor: pointer;
+  }
+  .send-btn:active {
+    background-color: $bg-btn;
+    background: -webkit-linear-gradient(90deg, $bg-btn-rgba-active 0%, $bg-btn-rgba 100%);
+    background: -moz-linear-gradient(90deg, $bg-btn-rgba-active 0%, $bg-btn-rgba 100%);
+    background: o-linear-gradient(90deg, $bg-btn-rgba-active 0%, $bg-btn-rgba 100%);
+    background: ms-linear-gradient(90deg, $bg-btn-rgba-active 0%, $bg-btn-rgba 100%);
+    background: linear-gradient(0deg, $bg-btn-rgba-active 0%, $bg-btn-rgba 100%);
+  }
+}
+
+footer {
+  background-color: $footer-background;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 26px 45px 33px 29px;
+  color:  $footer-color;
+  font-size: $footer-font-size;
+  line-height: $footer-line-height;
+}
+
+
+/* Адаптив */
+
+@media screen and (max-width: 1000px){
+  main {
+    width: 424px;
+  }
+  #wrap-date-cvv {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 790px){
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main, nav {
+    width: $main-width;
+  }
+  ul {
+    .nav__item {
+      padding: 0;
+      a {
+        min-width: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px){
+  #container {
+    margin: 0;
+  }
+  main, nav, footer{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px){
+  main {
+    #auth {
+      padding: 20px 10px 20px 10px;
+      
+//      #card-block {
+//        height: 305px;
+//      }
+    }
+  }
+}
+
+@media screen and (max-width: 385px){
+  main {
+    #auth {
+      padding: 20px 10px 20px 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      #score {
+        grid-template-columns: 50% 50%;
+      }
+      
+      #card-block {
+        .card {
+          width: 100%;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0 0 0;
+          width: 100%;
+
+          .card-number {
+            margin-top: 10px;
+            
+            .card-number__item {
+              margin-right: 5px;
+              padding-left: 5px;
+            }
+            .card-number__item:last-child {
+              margin-right: 0;
+            }
+            .card-number__item:invalid {
+              border-color: red;
+            }
+          }
+          
+          .card-user {
+            width: 100%;
+            .card-user__field {
+              width: 100%;
+            }
+          }
+          
+          #wrap-date-cvv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            span {
+              text-align: center;
+              display: block;
+            }
+            
+            #cvv-block {
+              margin-top: 10px;
+              .subtitle {
+                margin-right: 0;
+              }
+            }
+            
+            #cvv-faq svg {
+              right: 8px;
+            }
+          }
+        }
+        
+        .card-front {
+          width: 100%;
+          height: 305px;
+          display: none;
+        }
+      
+        .card-back {
+          display: none;
+        }
+      }
+      
+      .send-btn {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 348px){
+  main {
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  #container, main {
+    min-width: 320px;
+  }
+}
